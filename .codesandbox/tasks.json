@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "yarn"
     }
   ],
 
@@ -11,33 +11,33 @@
   "tasks": {
     "dev": {
       "name": "Start Dev Server",
-      "command": "npm run dev",
+      "command": "yarn build && yarn dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
       },
       "restartOn": {
-        "files": ["./package-lock.json"]
+        "files": ["./yarn.json"]
       }
     },
     "build": {
       "name": "Build",
-      "command": "npm run build",
+      "command": "yarn build",
       "runAtStart": false
     },
     "start": {
       "name": "Start Server",
-      "command": "npm run start",
+      "command": "yarn start",
       "runAtStart": false
     },
     "lint": {
       "name": "Lint",
-      "command": "npm run lint",
+      "command": "yarn lint",
       "runAtStart": false
     },
     "install": {
       "name": "Install Dependencies",
-      "command": "npm install",
+      "command": "yarn",
       "restartOn": {
         "files": ["./package.json"]
       }
